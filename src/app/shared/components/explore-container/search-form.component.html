@@ -1,0 +1,29 @@
+<ion-grid *ngIf="searchForm" fixed>
+  <form [formGroup]="searchForm">
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Address</ion-label>
+          <ion-input formControlName="address" type="text" placeholder=""></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Radius</ion-label>
+          <ion-range formControlName="rad" min="1" max="15" pin="true" snaps="true">
+            <ion-label slot="start">1</ion-label>
+            <ion-label slot="end">15</ion-label>
+          </ion-range>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col size="12">
+        <IonProgressBar type="indeterminate"></IonProgressBar><br />
+        <ion-button shape="round" [disabled]="searchForm.invalid" (click)="submit()" fill="outline">Search</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-grid>
