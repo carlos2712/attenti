@@ -11,6 +11,7 @@ Intructions:
     browser : ionic cordova browser ios -l // Just for test. 
     
     * Make sure  native-run is installed globally 
+    
     ** For android make sure SDK 22 is downloaded. 
     
     
